@@ -1,5 +1,5 @@
 FROM golang:1.22.3-alpine
-RUN apk add bash cmake build-base zlib-dev openssl-dev libuv-dev json-c-dev libwebsockets-dev libwebsockets-evlib_uv
+RUN apk add cmake build-base zlib-dev openssl-dev libuv-dev json-c-dev libwebsockets-dev libwebsockets-evlib_uv
 
 WORKDIR /src
 COPY ./ttyd ./ttyd
