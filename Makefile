@@ -14,7 +14,7 @@ PORT=8000
 
 serve: build
 	# ./bin/bbs --server
-	ttyd -p $(PORT) -W ./bin/bbs
+	ttyd -p $(PORT) -W -t "titleFixed=Damian's BBS" ./bin/bbs
 
 clean:
 	rm -rf ./tmp
