@@ -1,0 +1,3 @@
+[submodule "ttyd"]
+	path = ttyd
+	url = https://github.com/moncheeta/ttyd.git
