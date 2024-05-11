@@ -22,8 +22,8 @@ var (
 	border = lipgloss.NewStyle().BorderStyle(lipgloss.RoundedBorder())
 	header = lipgloss.NewStyle().Bold(true)
 
-  bold = lipgloss.NewStyle().Bold(true)
-  italic = lipgloss.NewStyle().Italic(true)
+	bold   = lipgloss.NewStyle().Bold(true)
+	italic = lipgloss.NewStyle().Italic(true)
 
 	inactiveTab = lipgloss.NewStyle().BorderStyle(inactiveBorder())
 	activeTab   = lipgloss.NewStyle().BorderStyle(activeBorder())

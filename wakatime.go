@@ -39,7 +39,7 @@ func getStats() WakatimeData {
 	if err = json.Unmarshal(r.Body(), &wr); err != nil {
 		return WakatimeData{}
 	}
-  return wr.Data
+	return wr.Data
 }
 
 func WakatimeStats() string {
@@ -61,6 +61,6 @@ func WakatimeStats() string {
 	return lipgloss.JoinVertical(lipgloss.Top,
 		"activity:",
 		lipgloss.JoinHorizontal(lipgloss.Top, names.String(), " ", time.String()),
-		"total: " + total,
+		"total: "+total,
 	)
 }

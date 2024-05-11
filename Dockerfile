@@ -2,7 +2,7 @@ FROM golang:1.22.3-alpine
 RUN apk add git cmake build-base zlib-dev openssl-dev libuv-dev json-c-dev libwebsockets-dev libwebsockets-evlib_uv
 
 WORKDIR /src/ttyd
-RUN git clone https://github.com/moncheeta/ttyd.git .
+COPY ./ttyd/* ./
 RUN mkdir ./build && cd ./build && cmake .. && make && make install
 
 WORKDIR /src/bbs
