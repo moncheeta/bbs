@@ -9,8 +9,8 @@ WORKDIR /src/bbs
 COPY go.mod go.sum ./
 RUN go mod download
 COPY *.go ./
-RUN CGO_ENABLED=0 GOOS=linux go build -o ./client
 COPY ./assets ./assets
+RUN CGO_ENABLED=0 GOOS=linux go build -o ./client
 
 EXPOSE 80
-CMD ["ttyd", "-p", "80", "-W", "-t", "titleFixed=Damian's BBS", "./client"]
+CMD ["ttyd", "-p", "443", "-t", "titleFixed=Damian's BBS", "-S", "-C", "/ssl/fullchain.pem", "-K", "/ssl/privkey.pem", "-W", "./client"]
