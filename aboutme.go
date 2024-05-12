@@ -42,8 +42,7 @@ func (m AboutMe) Picture() string {
 }
 
 func (m AboutMe) ContactInfo() string {
-	return `alias: moncheeta
-email: moncheeta@prime8.dev
+	return `email: moncheeta@prime8.dev
 github: https://github.com/moncheeta
 linkedin: https://www.linkedin.com/in/damian-myrda`
 }

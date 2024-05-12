@@ -13,4 +13,4 @@ COPY ./assets ./assets
 RUN CGO_ENABLED=0 GOOS=linux go build -o ./client
 
 EXPOSE 80
-CMD ["ttyd", "-p", "443", "-t", "titleFixed=Damian's BBS", "-S", "-C", "/ssl/fullchain.pem", "-K", "/ssl/privkey.pem", "-W", "./client"]
+CMD ["ttyd", "-p", "443", "-t", "titleFixed=Damian's BBS", "-t", "disableLeaveAlert=true", "-t", "disableResizeOverlay=true", "-S", "-C", "/ssl/fullchain.pem", "-K", "/ssl/privkey.pem", "-W", "./client"]
