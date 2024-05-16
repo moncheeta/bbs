@@ -20,14 +20,18 @@ func (m AboutMe) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 }
 
 func (m AboutMe) View() string {
-	return lipgloss.JoinHorizontal(lipgloss.Top,
-		border.Render(lipgloss.JoinVertical(lipgloss.Top,
-			m.Picture(),
-			m.ContactInfo(),
-		)),
-		" ",
-		m.About(),
-	)
+    content := m.About()
+    if width >= 120 {
+        content = lipgloss.JoinHorizontal(lipgloss.Top,
+            border.Render(lipgloss.JoinVertical(lipgloss.Top,
+                m.Picture(),
+                m.ContactInfo(),
+            )),
+            " ",
+            content,
+        )
+    }
+    return content
 }
 
 func (m AboutMe) Picture() string {
@@ -52,6 +56,9 @@ func (m AboutMe) About() string {
 
 	name, _ := os.ReadFile("./assets/name.txt")
 	_, _ = content.WriteString(string(name))
+    if width < 120 {
+        content.WriteString(m.ContactInfo() + "\n\n")
+    }
 	_, _ = content.WriteString(`* ` + bold.Render("monkeys") + ` are his favorite animal
 * lives in the ` + bold.Render("terminal") + `
 * loves ` + bold.Render("systems") + ` and ` + bold.Render("backend") + ` programming
