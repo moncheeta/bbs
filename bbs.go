@@ -102,8 +102,7 @@ func (m BBS) View() string {
 	tabBar = lipgloss.JoinHorizontal(lipgloss.Top, tabs...)
 	tabBarWidth := lipgloss.Width(tabBar)
 	if tabBarWidth < width {
-		height := lipgloss.Height(tabBar)
-		lining := lipgloss.PlaceVertical(height, lipgloss.Bottom, strings.Repeat(lipgloss.RoundedBorder().Bottom, width-tabBarWidth))
+		lining := lipgloss.PlaceVertical(lipgloss.Height(tabBar), lipgloss.Bottom, strings.Repeat(lipgloss.RoundedBorder().Bottom, width-tabBarWidth))
 		tabBar = lipgloss.JoinHorizontal(lipgloss.Top, tabBar, lining)
 	}
 

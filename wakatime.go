@@ -59,7 +59,7 @@ func WakatimeStats() string {
 				"\n")
 	}
 	return lipgloss.JoinVertical(lipgloss.Top,
-		"activity:",
+		"activity the past 7 days:",
 		lipgloss.JoinHorizontal(lipgloss.Top, names.String(), " ", time.String()),
 		"total: "+total,
 	)
