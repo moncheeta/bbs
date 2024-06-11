@@ -27,27 +27,17 @@ var projects = []Project{
 	{
 		"BBS",
 		"This is my Bulletin Board System(BBS). Here, you can learn about me and my projects.",
-		"not available yet",
+		"https://github.com/moncheeta/bbs",
 	},
 	{
 		"CSC Website",
 		"I made a website for Computer Science Club(CSC) at Prospect High School during a mini-hackathon. The website displays the date and time of the next meeting, recent annocements, members, and any projects those members want to share.",
-		"https://github.com/moncheeta/computer_science_club.git",
+		"https://github.com/moncheeta/computer_science_club",
 	},
-	// {
-	//   "Chess Rewinder",
-	//   "Played a chess game but want to wind it back? Use Chess Rewinder. You are able to record and replay your games. With your new insight, you will be able to dominate your opponents!",
-	//   "not available yet",
-	// },
-	// {
-	//   "Fitness Tracker",
-	//   "Want an easy way to keep track of your progress and your workouts? Try Fitness Tracker. Keep track of your weight, personal records, and any workouts you've devised.",
-	//   "not available yet",
-	// },
 	{
 		"Veteran Donation Website",
 		"For my first ever hackathon, I decided to help out veterans through donations. It interacts with Venmo's APIs for users to donate.",
-		"https://github.com/moncheeta/veteran_donations.git",
+		"https://github.com/moncheeta/veteran_donations",
 	},
 }
 
